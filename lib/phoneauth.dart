@@ -15,16 +15,19 @@ class _PhoneAuthState extends State<PhoneAuth> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("OTP"),
+        title: Text("Verify Phone Number"),
       ),
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(14.0),
             child: TextField(
               controller: phoneController,
               keyboardType: TextInputType.phone,
-              decoration: InputDecoration(),
+              decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(15)),
+                  hintText: "Enter phone number"),
             ),
           ),
           ElevatedButton(
